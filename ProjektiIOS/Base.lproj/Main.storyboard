@@ -146,6 +146,9 @@
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="HfI-Hh-oHY" eventType="touchUpInside" id="BYP-ed-6zR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Szf-U9-hMJ">
                                 <rect key="frame" x="288" y="780" width="106" height="57"/>
@@ -165,6 +168,13 @@
                         <color key="backgroundColor" red="1" green="0.57207137632072191" blue="0.65071820742313891" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="suL-cD-hh5"/>
+                    <connections>
+                        <outlet property="confirm" destination="eEe-L9-zX6" id="AsX-9w-kTa"/>
+                        <outlet property="date" destination="5u2-9h-Ddx" id="WHF-iw-MaJ"/>
+                        <outlet property="email" destination="Ov4-gH-Meb" id="1cf-xs-LG3"/>
+                        <outlet property="name" destination="Kwk-I0-CPk" id="y0u-0f-G0f"/>
+                        <outlet property="password" destination="Ntp-gK-g1n" id="0NW-Zo-HVn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXp-nb-plG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
