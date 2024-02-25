@@ -113,6 +113,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
 
     func insertUser() {
+        guard let hashedPassword = hashPassword(password.text ?? "") else {
+            print("Error hashing password")
+            return
+        }
+        
         let insertQuery = "INSERT INTO users (name, email, password, date) VALUES (?, ?, ?, ?);"
         var statement: OpaquePointer?
         if sqlite3_prepare_v2(db, insertQuery, -1, &statement, nil) == SQLITE_OK {
@@ -121,13 +126,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             let dateString = dateFormatter.string(from: date.date)
             sqlite3_bind_text(statement, 1, name.text, -1, nil)
             sqlite3_bind_text(statement, 2, email.text, -1, nil)
-            if let hashedPassword = hashPassword(password.text) {
-                sqlite3_bind_text(statement, 3, hashedPassword, -1, nil)
-            } else {
-                showAlert(message: "Error hashing password")
-                sqlite3_finalize(statement)
-                return
-            }
+            sqlite3_bind_text(statement, 3, hashedPassword, -1, nil) // Use hashed password
             sqlite3_bind_text(statement, 4, dateString, -1, nil)
             if sqlite3_step(statement) != SQLITE_DONE {
                 print("Error inserting user")
@@ -143,14 +142,14 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func hashPassword(_ password: String?) -> String? {
-        guard let password = password else {
-            return nil
+    func hashPassword(_ password: String) -> String? {
+       guard let data = password.data(using: .utf8) else {
+                return nil
+            }
+            let hashed = SHA256.hash(data: data)
+            return hashed.compactMap { String(format: "%02x", $0) }.joined()
         }
-        let inputData = Data(password.utf8)
-        let hashedData = SHA256.hash(data: inputData)
-        return hashedData.compactMap { String(format: "%02x", $0) }.joined()
-    }
+    
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
