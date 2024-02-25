@@ -39,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		9250D66F2B890B6200A25169 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		926AC8992B8BF59900C18F0F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		92B440982B88F42000389208 /* ProjektiIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjektiIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B4409B2B88F42000389208 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92B4409D2B88F42000389208 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 		92B4409A2B88F42000389208 /* ProjektiIOS */ = {
 			isa = PBXGroup;
 			children = (
+				926AC8992B8BF59900C18F0F /* README.md */,
 				92B4409B2B88F42000389208 /* AppDelegate.swift */,
 				92B4409D2B88F42000389208 /* SceneDelegate.swift */,
 				92B4409F2B88F42000389208 /* LoginViewController.swift */,
