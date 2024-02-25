@@ -16,7 +16,7 @@ import UIKit
 import SQLite3
 import CryptoKit
 
-class SignUpViewController: UIViewController, UITextFieldDelegate {
+class SignUpViewController: UIViewController {
 
     @IBOutlet var name:UITextField!
     @IBOutlet var email:UITextField!
@@ -36,11 +36,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-        // Set up text field delegates
-        name.delegate = self
-        email.delegate = self
-        password.delegate = self
-        confirm.delegate = self
+       
     }
 
     @IBAction func registerButtonTapped(_ sender: UIButton) {
@@ -87,8 +83,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         let currentDate = Date()
         let selectedDate = date.date
         let ageComponents = calendar.dateComponents([.year], from: selectedDate, to: currentDate)
-        guard let age = ageComponents.year, age >= 18 else {
-            showAlert(message: "You must be at least 18 years old to sign up")
+        guard let age = ageComponents.year, age >= 10 else {
+            showAlert(message: "You must be at least 10 years old to sign up")
             return false
         }
         
@@ -151,12 +147,5 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         }
     
 
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
+   
 }
