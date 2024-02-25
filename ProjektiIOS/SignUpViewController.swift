@@ -88,7 +88,7 @@ class SignUpViewController: UIViewController {
             return false
         }
         
-        showAlert1(message: "User Added successfully")
+            //showAlert1(message: "User Added successfully")
         return true
     }
 
@@ -109,34 +109,54 @@ class SignUpViewController: UIViewController {
     }
 
     func insertUser() {
+      
         guard let hashedPassword = hashPassword(password.text ?? "") else {
-            print("Error hashing password")
-            return
-        }
+                    print("Error hashing password")
+                    return
+                }
         
-        let insertQuery = "INSERT INTO users (name, email, password, date) VALUES (?, ?, ?, ?);"
-        var statement: OpaquePointer?
-        if sqlite3_prepare_v2(db, insertQuery, -1, &statement, nil) == SQLITE_OK {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-            let dateString = dateFormatter.string(from: date.date)
-            sqlite3_bind_text(statement, 1, name.text, -1, nil)
-            sqlite3_bind_text(statement, 2, email.text, -1, nil)
-            sqlite3_bind_text(statement, 3, hashedPassword, -1, nil) // Use hashed password
-            sqlite3_bind_text(statement, 4, dateString, -1, nil)
-            if sqlite3_step(statement) != SQLITE_DONE {
-                print("Error inserting user")
-            } else {
-                print("User inserted successfully")
-                name.text = ""
-                email.text = ""
-                password.text = ""
-                confirm.text = ""
-                date.setDate(Date(), animated: true)
+        let selectQuery = "SELECT COUNT(*) FROM users WHERE email = ?;"
+        var selectStatement: OpaquePointer?
+
+        if sqlite3_prepare_v2(db, selectQuery, -1, &selectStatement, nil) == SQLITE_OK {
+            sqlite3_bind_text(selectStatement, 1, email.text, -1, nil)
+            
+            if sqlite3_step(selectStatement) == SQLITE_ROW {
+                let userCount = Int(sqlite3_column_int(selectStatement, 0))
+                
+                if userCount > 0 {
+                    // User with the same email already exists
+                    showAlert(message:"User with the same email already exists.")
+                    return
+                }
             }
-            sqlite3_finalize(statement)
+            sqlite3_finalize(selectStatement)
         }
-    }
+                
+                let insertQuery = "INSERT INTO users (name, email, password, date) VALUES (?, ?, ?, ?);"
+                var statement: OpaquePointer?
+                if sqlite3_prepare_v2(db, insertQuery, -1, &statement, nil) == SQLITE_OK {
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd"
+                    let dateString = dateFormatter.string(from: date.date)
+                    sqlite3_bind_text(statement, 1, name.text, -1, nil)
+                    sqlite3_bind_text(statement, 2, email.text, -1, nil)
+                    sqlite3_bind_text(statement, 3, hashedPassword, -1, nil) // Use hashed password
+                    sqlite3_bind_text(statement, 4, dateString, -1, nil)
+                    if sqlite3_step(statement) != SQLITE_DONE {
+                        showAlert(message:"Error inserting user")
+                    } else {
+                        showAlert1(message:"User inserted successfully")
+                        name.text = ""
+                        email.text = ""
+                        password.text = ""
+                        confirm.text = ""
+                        date.setDate(Date(), animated: true)
+                    }
+                    sqlite3_finalize(statement)
+                }
+            }
+    
     
     func hashPassword(_ password: String) -> String? {
        guard let data = password.data(using: .utf8) else {
