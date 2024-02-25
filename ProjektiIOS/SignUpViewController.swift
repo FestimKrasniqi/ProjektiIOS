@@ -5,13 +5,6 @@
 //  Created by R-Tech on 23.2.24.
 //
 
-//
-//  SignUpViewController.swift
-//  ProjektiIOS
-//
-//  Created by R-Tech on 23.2.24.
-//
-
 import UIKit
 import SQLite3
 import CryptoKit
