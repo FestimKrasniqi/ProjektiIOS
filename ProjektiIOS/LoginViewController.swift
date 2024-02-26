@@ -24,7 +24,8 @@ class LoginViewController: UIViewController {
         if validateFields() {
             if loginUser() {
                 // Login successful
-                showAlert1(message:"Login successful")
+                //showAlert1(message:"Login successful")
+                performSegue(withIdentifier: "Weather", sender: self)
                 email.text = ""
                 password.text = ""
             } else {
