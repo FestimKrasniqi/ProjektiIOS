@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		920754C12B8D1B0500EB0BB7 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920754C02B8D1B0500EB0BB7 /* WeatherViewController.swift */; };
+		920754C52B8D1E6300EB0BB7 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920754C42B8D1E6300EB0BB7 /* WeatherTableViewCell.swift */; };
+		920754C72B8D1EC800EB0BB7 /* HourlyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920754C62B8D1EC800EB0BB7 /* HourlyTableViewCell.swift */; };
 		9250D6702B890B6200A25169 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9250D66F2B890B6200A25169 /* SignUpViewController.swift */; };
 		92B4409C2B88F42000389208 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4409B2B88F42000389208 /* AppDelegate.swift */; };
 		92B4409E2B88F42000389208 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4409D2B88F42000389208 /* SceneDelegate.swift */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		920754C02B8D1B0500EB0BB7 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		920754C42B8D1E6300EB0BB7 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		920754C62B8D1EC800EB0BB7 /* HourlyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyTableViewCell.swift; sourceTree = "<group>"; };
 		9250D66F2B890B6200A25169 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		926AC8992B8BF59900C18F0F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		92B440982B88F42000389208 /* ProjektiIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjektiIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +87,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		920754C22B8D1DEB00EB0BB7 /* WeatherCells */ = {
+			isa = PBXGroup;
+			children = (
+				920754C42B8D1E6300EB0BB7 /* WeatherTableViewCell.swift */,
+			);
+			path = WeatherCells;
+			sourceTree = "<group>";
+		};
+		920754C32B8D1E0400EB0BB7 /* HourlyCollectionCells */ = {
+			isa = PBXGroup;
+			children = (
+				920754C62B8D1EC800EB0BB7 /* HourlyTableViewCell.swift */,
+			);
+			path = HourlyCollectionCells;
+			sourceTree = "<group>";
+		};
 		92B4408F2B88F42000389208 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +126,8 @@
 		92B4409A2B88F42000389208 /* ProjektiIOS */ = {
 			isa = PBXGroup;
 			children = (
+				920754C32B8D1E0400EB0BB7 /* HourlyCollectionCells */,
+				920754C22B8D1DEB00EB0BB7 /* WeatherCells */,
 				926AC8992B8BF59900C18F0F /* README.md */,
 				92B4409B2B88F42000389208 /* AppDelegate.swift */,
 				92B4409D2B88F42000389208 /* SceneDelegate.swift */,
@@ -114,6 +138,7 @@
 				92B440A92B88F42300389208 /* LaunchScreen.storyboard */,
 				92B440AC2B88F42300389208 /* Info.plist */,
 				92B440A42B88F42000389208 /* ProjektiIOS.xcdatamodeld */,
+				920754C02B8D1B0500EB0BB7 /* WeatherViewController.swift */,
 			);
 			path = ProjektiIOS;
 			sourceTree = "<group>";
@@ -267,6 +292,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				92B440A02B88F42000389208 /* LoginViewController.swift in Sources */,
+				920754C12B8D1B0500EB0BB7 /* WeatherViewController.swift in Sources */,
+				920754C72B8D1EC800EB0BB7 /* HourlyTableViewCell.swift in Sources */,
+				920754C52B8D1E6300EB0BB7 /* WeatherTableViewCell.swift in Sources */,
 				92B4409C2B88F42000389208 /* AppDelegate.swift in Sources */,
 				92B4409E2B88F42000389208 /* SceneDelegate.swift in Sources */,
 				92B440A62B88F42000389208 /* ProjektiIOS.xcdatamodeld in Sources */,
