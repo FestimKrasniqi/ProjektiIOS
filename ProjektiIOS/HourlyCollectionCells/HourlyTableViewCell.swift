@@ -1,5 +1,5 @@
 //
-//  HourlyTableViewCell.swift
+//  HourlyCollectionTableViewCell.swift
 //  ProjektiIOS
 //
 //  Created by R-Tech on 26.2.24.
@@ -25,5 +25,5 @@ class HourlyTableViewCell: UITableViewCell {
         return UINib(nibName: "HourlyTableViewCell", bundle: nil)
     }
 
-
+    
 }

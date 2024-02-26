@@ -26,4 +26,5 @@ class WeatherTableViewCell: UITableViewCell {
         return UINib(nibName: "WeatherTableViewCell", bundle: nil)
     }
 
+    
 }
