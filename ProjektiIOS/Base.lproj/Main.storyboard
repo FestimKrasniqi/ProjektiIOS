@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="R8W-Ud-wIO">
-                                <rect key="frame" x="-7" y="-30" width="441" height="902"/>
+                                <rect key="frame" x="-7" y="-30" width="440" height="902"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngU-uM-aij">
@@ -196,18 +196,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2OL-Ei-M3P">
-                                <rect key="frame" x="0.0" y="20" width="428" height="872"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2OL-Ei-M3P">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g53-hb-aU6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2OL-Ei-M3P" firstAttribute="top" secondItem="fa4-CW-ZMf" secondAttribute="top" id="WYy-bL-99U"/>
+                            <constraint firstAttribute="bottom" secondItem="2OL-Ei-M3P" secondAttribute="bottom" id="xk0-y8-xfD"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yPd-NZ-pXo"/>
                     <connections>
-                        <outlet property="table" destination="2OL-Ei-M3P" id="k6f-XO-dtq"/>
+                        <outlet property="table" destination="2OL-Ei-M3P" id="QLg-wL-0eN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vK5-tb-7Jn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
