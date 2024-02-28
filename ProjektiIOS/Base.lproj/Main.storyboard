@@ -21,27 +21,6 @@
                                 <rect key="frame" x="-7" y="-30" width="440" height="902"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngU-uM-aij">
-                                        <rect key="frame" x="20" y="534" width="116" height="53"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <backgroundConfiguration key="background" cornerRadius="13">
-                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                            </backgroundConfiguration>
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Login">
-                                                    <attributes>
-                                                        <font key="NSFont" size="21" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="szA-bY-w7b"/>
-                                            <segue destination="gxe-Ta-K8f" kind="show" identifier="Weather" id="5QY-Ip-Coa"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A03-cx-nXr">
                                         <rect key="frame" x="292" y="534" width="116" height="53"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -79,6 +58,27 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <imageReference key="image" image="person" catalog="system" renderingMode="original"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngU-uM-aij">
+                                        <rect key="frame" x="20" y="534" width="116" height="53"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background" cornerRadius="13">
+                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                            </backgroundConfiguration>
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Login">
+                                                    <attributes>
+                                                        <font key="NSFont" size="21" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="szA-bY-w7b"/>
+                                            <segue destination="gxe-Ta-K8f" kind="show" identifier="Weather" id="HYU-wd-BjB"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="WMo-Pn-Smq"/>
                                 <color key="backgroundColor" red="0.21642199279999999" green="0.66355995560000003" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -95,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="432" y="-416"/>
+            <point key="canvasLocation" x="440" y="-650"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="zD2-Wk-tH5">
@@ -191,12 +191,12 @@
         <!--Weather View Controller-->
         <scene sceneID="sM6-83-Htt">
             <objects>
-                <viewController id="gxe-Ta-K8f" customClass="WeatherViewController" customModule="ProjektiIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gxe-Ta-K8f" customClass="WeatherViewController" customModule="ProjektiIOS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fa4-CW-ZMf">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2OL-Ei-M3P">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2OL-Ei-M3P">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -205,17 +205,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2OL-Ei-M3P" firstAttribute="top" secondItem="fa4-CW-ZMf" secondAttribute="top" id="WYy-bL-99U"/>
+                            <constraint firstItem="2OL-Ei-M3P" firstAttribute="centerX" secondItem="fa4-CW-ZMf" secondAttribute="centerX" id="iwf-Ck-g6z"/>
                             <constraint firstAttribute="bottom" secondItem="2OL-Ei-M3P" secondAttribute="bottom" id="xk0-y8-xfD"/>
+                            <constraint firstItem="2OL-Ei-M3P" firstAttribute="trailing" secondItem="g53-hb-aU6" secondAttribute="trailing" id="yRs-e3-uZ8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yPd-NZ-pXo"/>
                     <connections>
-                        <outlet property="table" destination="2OL-Ei-M3P" id="QLg-wL-0eN"/>
+                        <outlet property="table" destination="2OL-Ei-M3P" id="hXr-UC-rOQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vK5-tb-7Jn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="38" y="293"/>
+            <point key="canvasLocation" x="1155" y="-338"/>
         </scene>
     </scenes>
     <resources>
