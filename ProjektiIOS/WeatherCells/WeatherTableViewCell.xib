@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w51-bx-7PV">
-                        <rect key="frame" x="96" y="11" width="66" height="199"/>
+                        <rect key="frame" x="591" y="11" width="66" height="199"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="66" id="gxE-Ys-reh"/>
                         </constraints>
@@ -26,7 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Low" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9h-Qu-nYU">
-                        <rect key="frame" x="20" y="11" width="66" height="199"/>
+                        <rect key="frame" x="515" y="11" width="66" height="199"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="66" id="1Oy-gm-dYh"/>
                         </constraints>
@@ -34,19 +34,47 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cr1-Bc-Kj7">
+                        <rect key="frame" x="86" y="70.666666666666671" width="80" height="80.000000000000014"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="Haf-ec-uus"/>
+                            <constraint firstAttribute="width" constant="80" id="wC1-1b-LDD"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpl-fc-7H0">
+                        <rect key="frame" x="12" y="11" width="66" height="199"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="66" id="doT-c9-Cad"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Jpl-fc-7H0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="3vb-EA-Ek8"/>
                     <constraint firstItem="l9h-Qu-nYU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="4p2-LR-0xg"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Jpl-fc-7H0" secondAttribute="bottom" id="K5h-8E-1FY"/>
+                    <constraint firstItem="cr1-Bc-Kj7" firstAttribute="leading" secondItem="Jpl-fc-7H0" secondAttribute="trailing" id="Q1C-x4-daw"/>
+                    <constraint firstItem="cr1-Bc-Kj7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bcw-6Z-D3y"/>
                     <constraint firstItem="w51-bx-7PV" firstAttribute="leading" secondItem="l9h-Qu-nYU" secondAttribute="trailing" constant="10" id="bfH-qL-Cx1"/>
                     <constraint firstAttribute="bottomMargin" secondItem="w51-bx-7PV" secondAttribute="bottom" id="bpM-Ew-J78"/>
                     <constraint firstItem="l9h-Qu-nYU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="dXe-QQ-FQZ"/>
                     <constraint firstAttribute="bottomMargin" secondItem="l9h-Qu-nYU" secondAttribute="bottom" id="g3p-9g-YNd"/>
                     <constraint firstItem="w51-bx-7PV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="jjx-ka-VxV"/>
+                    <constraint firstItem="cr1-Bc-Kj7" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="koL-r7-TkY"/>
                     <constraint firstItem="w51-bx-7PV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="571" id="wCx-kg-Nkd"/>
                     <constraint firstAttribute="trailingMargin" secondItem="w51-bx-7PV" secondAttribute="trailing" id="xOY-ZM-pIQ"/>
+                    <constraint firstItem="Jpl-fc-7H0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="ziS-1u-cbQ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dayLabel" destination="Jpl-fc-7H0" id="FJg-os-dE4"/>
+                <outlet property="highTempLabel" destination="w51-bx-7PV" id="f3C-I5-boz"/>
+                <outlet property="iconImage" destination="cr1-Bc-Kj7" id="wZH-Y3-NKg"/>
+                <outlet property="lowTempLabel" destination="l9h-Qu-nYU" id="ji0-tm-UUc"/>
+            </connections>
             <point key="canvasLocation" x="1809.1121495327102" y="60.583153347732186"/>
         </tableViewCell>
     </objects>
