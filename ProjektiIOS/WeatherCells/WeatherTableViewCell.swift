@@ -53,25 +53,27 @@ class WeatherTableViewCell: UITableViewCell {
             //var iconImageName: String?
 
         
-        if model.weather.count >= 4 {
-            let summary = model.weather[1].main.lowercased()
-            
-            if summary.contains("clear") {
-                self.iconImage.image = UIImage(named: "Sun")
-            } else if summary.contains("clouds") {
-                self.iconImage.image = UIImage(named: "Cloud")
-            } else if summary.contains("rain") {
-                self.iconImage.image = UIImage(named: "Rain")
-            } else if summary.contains("snow") {
-                self.iconImage.image = UIImage(named: "Snow")
+        if model.weather.count >= 1 {
+            let icon = model.weather[0].main.lowercased()
+           
+            if icon.contains("clear") {
+                self.iconImage.image = UIImage(named:"Sun")
+            } else if icon.contains("clouds") {
+                self.iconImage.image = UIImage(named:"Cloud")
+            } else if icon.contains("rain") {
+                self.iconImage.image = UIImage(named:"Rain")
+            } else if icon.contains("snow") {
+                self.iconImage.image = UIImage(named:"Snow")
             } else {
-                self.iconImage.image = UIImage(named: "Sun")
+                self.iconImage.image = UIImage(named:"Sun")
             }
         } else {
-            self.iconImage.image = UIImage(named: "Sun")
+            
+            self.iconImage.image = UIImage(named:"Sun")
+           
+
         }
-       
-        
+        print("Weather count: \(model.weather.count)")
     }
     
     func getDateFromDateString(_ dateString: String) -> Date? {

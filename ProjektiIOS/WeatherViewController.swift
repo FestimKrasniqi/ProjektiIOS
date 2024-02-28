@@ -13,6 +13,7 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
     @IBOutlet var table:UITableView!
     
     var models = [WeatherInfo] ()
+    var models1 = [WeatherDetail] ()
     
     var currentLocation:CLLocation?
     var current:WeatherInfo?
@@ -77,11 +78,11 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
                    let decoder = JSONDecoder()
                 
                    let weatherData = try decoder.decode(WeatherData.self, from: data)
-                   print(weatherData.list)
+                       //print(weatherData.list)
                    DispatchQueue.main.async {
                     self.models.append(contentsOf: weatherData.list)
                     self.table.reloadData()
-                      // self.table.tableHeaderView = self.createTableHeader()
+                    self.table.tableHeaderView = self.createTableHeader()
                    }
                } catch {
                    print("Error decoding JSON: \(error)")
@@ -90,7 +91,7 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
         task.resume()
        }
 
-    /*func createTableHeader() -> UIView {
+    func createTableHeader() -> UIView {
       
                 let headerVIew = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.width))
 
@@ -121,7 +122,7 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
         return headerVIew
     
-}*/
+}
 
     
     
@@ -132,7 +133,7 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: WeatherTableViewCell.identifier,for:indexPath) as! WeatherTableViewCell
-        cell.configure(with: models[indexPath.row])
+        cell.configure(with:models[indexPath.row])
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
