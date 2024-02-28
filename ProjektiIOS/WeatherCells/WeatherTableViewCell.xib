@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w51-bx-7PV">
-                        <rect key="frame" x="591" y="11" width="66" height="199"/>
+                        <rect key="frame" x="96" y="11" width="66" height="199"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="66" id="gxE-Ys-reh"/>
                         </constraints>
@@ -26,7 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Low" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9h-Qu-nYU">
-                        <rect key="frame" x="515" y="11" width="66" height="199"/>
+                        <rect key="frame" x="20" y="11" width="66" height="199"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="66" id="1Oy-gm-dYh"/>
                         </constraints>
@@ -34,15 +34,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cr1-Bc-Kj7">
-                        <rect key="frame" x="86" y="70.666666666666671" width="80" height="80.000000000000014"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="80" id="Haf-ec-uus"/>
-                            <constraint firstAttribute="width" constant="80" id="wC1-1b-LDD"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpl-fc-7H0">
-                        <rect key="frame" x="12" y="11" width="66" height="199"/>
+                        <rect key="frame" x="399" y="11" width="66" height="199"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="66" id="doT-c9-Cad"/>
                         </constraints>
@@ -50,6 +43,13 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cr1-Bc-Kj7">
+                        <rect key="frame" x="211" y="70" width="80" height="80.000000000000014"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="Haf-ec-uus"/>
+                            <constraint firstAttribute="width" constant="80" id="wC1-1b-LDD"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Jpl-fc-7H0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="3vb-EA-Ek8"/>
