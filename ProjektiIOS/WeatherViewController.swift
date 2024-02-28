@@ -15,6 +15,7 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
     var models = [WeatherInfo] ()
     
     var currentLocation:CLLocation?
+    var current:WeatherInfo?
     
     let locationManager = CLLocationManager()
 
@@ -80,6 +81,7 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
                    DispatchQueue.main.async {
                     self.models.append(contentsOf: weatherData.list)
                     self.table.reloadData()
+                      // self.table.tableHeaderView = self.createTableHeader()
                    }
                } catch {
                    print("Error decoding JSON: \(error)")
@@ -88,7 +90,38 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
         task.resume()
        }
 
+    /*func createTableHeader() -> UIView {
+      
+                let headerVIew = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.width))
+
+                headerVIew.backgroundColor = UIColor(red: 52/255.0, green: 109/255.0, blue: 179/255.0, alpha: 1.0)
+
+                let locationLabel = UILabel(frame: CGRect(x: 10, y: 10, width: view.frame.size.width-20, height: headerVIew.frame.size.height/5))
+                let summaryLabel = UILabel(frame: CGRect(x: 10, y: 20+locationLabel.frame.size.height, width: view.frame.size.width-20, height: headerVIew.frame.size.height/5))
+        let tempLabel = UILabel(frame: CGRect(x: 10, y: 20+locationLabel.frame.size.height+summaryLabel.frame.size.height,width:view.frame.size.width-20,height:headerVIew.frame.size.height/2))
+        
+        
+        headerVIew.addSubview(locationLabel)
+        headerVIew.addSubview(tempLabel)
+        headerVIew.addSubview(summaryLabel)
+
+        tempLabel.textAlignment = .center
+        locationLabel.textAlignment = .center
+        summaryLabel.textAlignment = .center
+
+        locationLabel.text = "Current Location"
+
+        guard let currentWeather = self.current else {
+            return UIView()
+        }
+
+        tempLabel.text = "\(currentWeather.main.temp)°"
+        tempLabel.font = UIFont(name: "Helvetica-Bold", size: 32)
+        summaryLabel.text = self.current?.weather.description
+
+        return headerVIew
     
+}*/
 
     
     

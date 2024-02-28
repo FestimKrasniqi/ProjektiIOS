@@ -17,7 +17,7 @@ class WeatherTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .gray
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,16 +33,44 @@ class WeatherTableViewCell: UITableViewCell {
     }
 
     func configure(with model:WeatherInfo) {
+        
+        self.highTempLabel.textAlignment = .center
+        self.lowTempLabel.textAlignment = .center
+        
+        
         self.lowTempLabel.text = "\(Int(model.main.tempMin - 273.15))º"
         self.highTempLabel.text = "\(Int(model.main.tempMax - 273.15))º"
         self.iconImage.image = UIImage(named: "Sun")
         self.iconImage.contentMode = .scaleAspectFit
+        
         if let date = getDateFromDateString(model.dtTxt) {
                 // Format the date as required
                 self.dayLabel.text = getDayForDate(date)
             } else {
                 self.dayLabel.text = ""
             }
+        
+            //var iconImageName: String?
+
+        
+        if model.weather.count >= 4 {
+            let summary = model.weather[1].main.lowercased()
+            
+            if summary.contains("clear") {
+                self.iconImage.image = UIImage(named: "Sun")
+            } else if summary.contains("clouds") {
+                self.iconImage.image = UIImage(named: "Cloud")
+            } else if summary.contains("rain") {
+                self.iconImage.image = UIImage(named: "Rain")
+            } else if summary.contains("snow") {
+                self.iconImage.image = UIImage(named: "Snow")
+            } else {
+                self.iconImage.image = UIImage(named: "Sun")
+            }
+        } else {
+            self.iconImage.image = UIImage(named: "Sun")
+        }
+       
         
     }
     
