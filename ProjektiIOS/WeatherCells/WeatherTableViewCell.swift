@@ -73,7 +73,7 @@ class WeatherTableViewCell: UITableViewCell {
            
 
         }
-        print("Weather count: \(model.weather.count)")
+        
     }
     
     func getDateFromDateString(_ dateString: String) -> Date? {

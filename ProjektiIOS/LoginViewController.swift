@@ -28,6 +28,8 @@ class LoginViewController: UIViewController {
                 performSegue(withIdentifier: "Weather", sender: self)
                 email.text = ""
                 password.text = ""
+                
+                            
             } else {
                 // Login failed
                 showAlert(message:"Invalid email or password")
