@@ -43,14 +43,16 @@ class WeatherTableViewCell: UITableViewCell {
         self.iconImage.image = UIImage(named: "Sun")
         self.iconImage.contentMode = .scaleAspectFit
         
-        if let date = getDateFromDateString(model.dtTxt) {
-                // Format the date as required
-                self.dayLabel.text = getDayForDate(date)
-            } else {
-                self.dayLabel.text = ""
-            }
         
-            //var iconImageName: String?
+        if let date = getDateFromDateString(model.dtTxt) {
+                        
+                self.dayLabel.text = getDayForDate(date)
+                             
+                }
+                else {
+                    self.dayLabel.text = ""
+                             
+                }
 
         
         if model.weather.count >= 1 {
