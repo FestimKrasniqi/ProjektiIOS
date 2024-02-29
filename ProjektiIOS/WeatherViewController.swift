@@ -15,6 +15,7 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
     var models = [WeatherInfo] ()
     var models1 = [WeatherDetail] ()
     
+    
     var currentLocation:CLLocation?
     var current:WeatherData?
     
@@ -88,7 +89,7 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
                 
                    let weatherData = try decoder.decode(WeatherData.self, from: data)
                    
-                 
+                  
                        //print(weatherData.list)
                    DispatchQueue.main.async {
                     self.models.append(contentsOf: weatherData.list)
@@ -147,10 +148,24 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 {
+            return 1
+        }
         return models.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: HourlyTableViewCell.identifier,for:indexPath) as! HourlyTableViewCell
+            cell.configure(with:models)
+            print("Number of models in section 0: \(models.count)")
+            cell.backgroundColor = UIColor(red: 52/255.0, green: 109/255.0, blue: 179/255.0, alpha: 1.0)
+            return cell
+        }
+        
+        
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: WeatherTableViewCell.identifier,for:indexPath) as! WeatherTableViewCell
         cell.configure(with:models[indexPath.row])
         cell.backgroundColor = UIColor(red: 52/255.0, green: 109/255.0, blue: 179/255.0, alpha: 1.0)

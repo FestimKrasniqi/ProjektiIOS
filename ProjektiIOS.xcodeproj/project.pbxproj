@@ -13,6 +13,8 @@
 		920754CE2B8D3BBA00EB0BB7 /* HourlyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920754CC2B8D3BBA00EB0BB7 /* HourlyTableViewCell.swift */; };
 		920754CF2B8D3BBA00EB0BB7 /* HourlyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 920754CD2B8D3BBA00EB0BB7 /* HourlyTableViewCell.xib */; };
 		9250D6702B890B6200A25169 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9250D66F2B890B6200A25169 /* SignUpViewController.swift */; };
+		925E4A082B90AF81007566F1 /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925E4A062B90AF81007566F1 /* CellController.swift */; };
+		925E4A092B90AF81007566F1 /* CellController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 925E4A072B90AF81007566F1 /* CellController.xib */; };
 		92B4409C2B88F42000389208 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4409B2B88F42000389208 /* AppDelegate.swift */; };
 		92B4409E2B88F42000389208 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4409D2B88F42000389208 /* SceneDelegate.swift */; };
 		92B440A02B88F42000389208 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4409F2B88F42000389208 /* LoginViewController.swift */; };
@@ -49,6 +51,8 @@
 		920754CC2B8D3BBA00EB0BB7 /* HourlyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyTableViewCell.swift; sourceTree = "<group>"; };
 		920754CD2B8D3BBA00EB0BB7 /* HourlyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourlyTableViewCell.xib; sourceTree = "<group>"; };
 		9250D66F2B890B6200A25169 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		925E4A062B90AF81007566F1 /* CellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
+		925E4A072B90AF81007566F1 /* CellController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellController.xib; sourceTree = "<group>"; };
 		926AC8992B8BF59900C18F0F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		92B440982B88F42000389208 /* ProjektiIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjektiIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B4409B2B88F42000389208 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,15 @@
 			path = HourlyCollectionCells;
 			sourceTree = "<group>";
 		};
+		925E4A052B90AECA007566F1 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				925E4A062B90AF81007566F1 /* CellController.swift */,
+				925E4A072B90AF81007566F1 /* CellController.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
 		92B4408F2B88F42000389208 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +145,7 @@
 		92B4409A2B88F42000389208 /* ProjektiIOS */ = {
 			isa = PBXGroup;
 			children = (
+				925E4A052B90AECA007566F1 /* CollectionViewCell */,
 				920754C32B8D1E0400EB0BB7 /* HourlyCollectionCells */,
 				920754C22B8D1DEB00EB0BB7 /* WeatherCells */,
 				926AC8992B8BF59900C18F0F /* README.md */,
@@ -275,6 +289,7 @@
 				92B440A82B88F42300389208 /* Assets.xcassets in Resources */,
 				920754CF2B8D3BBA00EB0BB7 /* HourlyTableViewCell.xib in Resources */,
 				92B440A32B88F42000389208 /* Main.storyboard in Resources */,
+				925E4A092B90AF81007566F1 /* CellController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +316,7 @@
 			files = (
 				920754CE2B8D3BBA00EB0BB7 /* HourlyTableViewCell.swift in Sources */,
 				920754CA2B8D3B6300EB0BB7 /* WeatherTableViewCell.swift in Sources */,
+				925E4A082B90AF81007566F1 /* CellController.swift in Sources */,
 				92B440A02B88F42000389208 /* LoginViewController.swift in Sources */,
 				920754C12B8D1B0500EB0BB7 /* WeatherViewController.swift in Sources */,
 				92B4409C2B88F42000389208 /* AppDelegate.swift in Sources */,

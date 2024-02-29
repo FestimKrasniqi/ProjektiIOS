@@ -9,15 +9,38 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HourlyCollectionTableViewCell" customModule="ProjektiIOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HourlyTableViewCell" rowHeight="248" id="kzP-lv-Y6h" customClass="HourlyTableViewCell" customModule="MyWeather" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="501" height="248"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kzP-lv-Y6h" id="2zC-gl-F6b">
+                <rect key="frame" x="0.0" y="0.0" width="501" height="248"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Q8s-mM-ufq">
+                        <rect key="frame" x="20" y="12" width="461" height="226"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pw9-c1-oRA">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="Q8s-mM-ufq" secondAttribute="trailing" id="2Wl-D2-1YQ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Q8s-mM-ufq" secondAttribute="bottom" id="E0D-9z-AmA"/>
+                    <constraint firstItem="Q8s-mM-ufq" firstAttribute="leading" secondItem="2zC-gl-F6b" secondAttribute="leadingMargin" id="JcH-yD-rzV"/>
+                    <constraint firstItem="Q8s-mM-ufq" firstAttribute="top" secondItem="2zC-gl-F6b" secondAttribute="topMargin" id="QN1-od-gti"/>
+                </constraints>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="139" y="70"/>
+            <viewLayoutGuide key="safeArea" id="Z3o-EN-tnk"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="collectionView" destination="Q8s-mM-ufq" id="gbw-UH-1jU"/>
+            </connections>
+            <point key="canvasLocation" x="47" y="111"/>
         </tableViewCell>
     </objects>
 </document>
