@@ -7,6 +7,6 @@
 on the data from longitude and latitude,to get this data we have used an api:"https://api.openweathermap.org/data/2.5/forecast?lat=\(lat)&lon=\(lon)&appid=d422dc0f81e96ccfe7ce31a35819b0df" from openweathermap.org.
 Contributors in this Project:
 
-[FestimKrasniqi](https://github.com/FestimKrasniqi)
+[Festim Krasniqi](https://github.com/FestimKrasniqi)
 
-[GentritAdemi](https://github.com/GentritAdemi)
+[Gentrit Ademi](https://github.com/GentritAdemi)
